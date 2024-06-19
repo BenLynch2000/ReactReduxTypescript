@@ -15,6 +15,7 @@ interface AppState {
 } 
 */
 
+
 class App extends React.Component<AppProps> {
   state = { counter: 0 };  
 
@@ -51,5 +52,34 @@ class App extends React.Component<AppProps> {
     );
   }
 }
- 
+
 root.render(<App />);
+
+/*
+
+const App = (props: AppProps) : JSX.Element => {
+  const [counter, setCounter] = React.useState(0);
+
+  const onIncrement = () => {
+    setCounter(counter + 1);
+  }
+
+  const onDecrement = () => {
+    setCounter(counter - 1);
+  }
+
+  return (
+    <div>
+      <h1 style={{ color: props.color }}>
+        Hello, World! {counter}
+      </h1>
+      <button onClick={onIncrement}>
+        Increment
+      </button>
+      <button onClick={onDecrement}>
+        Decrement 
+      </button>
+    </div>
+  );
+} 
+  */
