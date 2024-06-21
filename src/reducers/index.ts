@@ -6,7 +6,6 @@ export interface StoreState {
   todos: ToDo[];
 }
 
-
 export const reducers = combineReducers<StoreState>({
   todos: todosReducer,
 });
